@@ -8,6 +8,6 @@ All Albatros, it is first of all the story of three women who join forces to cre
 
 ## For launch the website
 
-$ npm i
-$ npm start
+$ npm i <br>
+$ npm start <br>
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
