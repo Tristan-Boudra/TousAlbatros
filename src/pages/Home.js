@@ -37,9 +37,9 @@ const Home = () => {
     ]
 
     return (
-        <div className="font-poppins">
+        <div>
             <Navbar />
-            <section className="relative">
+            <div className="relative">
                 <div className="flex">
                     <img src={require('../assets/images/home/background_header.png')} className="w-full h-full top-0" alt="Background header" />
                 </div>
@@ -56,31 +56,10 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </section>
-            <section className="pt-20 flex content-center max-w-screen-xl mx-auto">
+            </div>
+            <div className="pt-20 flex content-center">
                 <Icon contentIcon={contentIcon} />
-            </section>
-            <section className="pt-32 flex flex-col relative max-w-screen-xl mx-auto">
-                <h2 className="text-4xl text-slate-800 font-bold mx-auto">Les fondatrices</h2>
-                <div className="w-full mx-auto flex flex-col flex-wrap">
-                    <div className="flex flex-row flex-wrap justify-center mt-16 md:justify-between md:mt-32 items-center">
-                        <div className="flex">
-                            <img src={require('../assets/images/home/BlobCamille.png')} className="w-72 h-72 md:w-96 md:h-96 top-0" alt="Blob Camille" />
-                        </div>
-                        <div>
-                            <img src={require('../assets/images/home/Citation.png')} className="w-72 h-36 mt-8 md:mt-0 md:w-[32rem] md:h-52 md:mr-16 top-0" alt="Blob Camille" />
-                        </div>
-                    </div>
-                    <div className="flex flex-row flex-wrap justify-center md:justify-between mt-32 items-center">
-                        <div className="">
-                            <img src={require('../assets/images/home/BlobAnny.png')} className="w-72 h-72 md:w-96 md:h-96 top-0" alt="Blob Anny" />
-                        </div>
-                        <div className="">
-                            <img src={require('../assets/images/home/BlobMylene.png')} className="w-72 h-72 md:w-96 md:h-96 top-0" alt="Blob Mylène" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     );
 }
