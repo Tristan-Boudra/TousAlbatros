@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Icon from "../components/header/Icon";
+import Icon from "../components/home/header/Icon";
+import TextDescription from "../components/TextDescription";
 import { TrendingUp, Users, BadgeCheck, Lightbulb } from 'lucide-react';
 
 const Home = () => {
@@ -34,6 +35,15 @@ const Home = () => {
             title: '∞',
             subtitle: 'Projets innovants'
         },
+    ]
+
+    const contentDescription = [
+        {
+            id: 0,
+            tag: 'Qui sommes-nous ?',
+            title: 'L’Histoire de trois femmes',
+            description: 'Tous Albatros, c’est d’abord l’histoire de trois femmes qui s’associent pour créer une méthode croisant leurs différentes spécialités : l’accompagnement social, l’animation socio-éducative et le coaching.\n\nParce que construire son futur implique de comprendre sa propre histoire. Tous Albatros conçoit des projets visant à transmettre aux jeunes des clefs d’introspection et de projection.\n\nL’association utilise tous les outils nécessaires au développement de l’autodétermination, de l’épanouissement et de la capacité d’agir des adolescents.'
+        }
     ]
 
     return (
@@ -80,6 +90,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className="pt-32 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto">
+                <TextDescription TextDescription={contentDescription[0]} />
             </section>
         </div>
     );
