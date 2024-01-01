@@ -4,6 +4,8 @@ import Icon from "../components/header/Icon";
 import { TrendingUp, Users, BadgeCheck, Lightbulb } from 'lucide-react';
 import TextDescription from "../components/TextDescription";
 import Footer from "../components/Footer";
+import AvisClient from "../components/avisClient";
+import Carousel from "../components/carousel";
 
 const Home = () => {
     const TrendingUpIcon = <TrendingUp className="flex text-primary items-center mx-auto" size={40} />;
@@ -73,6 +75,22 @@ const Home = () => {
             </div>
             <section className="pt-32 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto">
                 <TextDescription TextDescription={contentDescription[0]} />
+            </section>
+            <section className="pt-32 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto">
+                <ul className="flex flex-col flex-wrap md:flex-row gap-10 mx-auto">
+                    <li>
+                        <AvisClient />
+                    </li>
+                    <li>
+                        <AvisClient />
+                    </li>
+                    <li>
+                        <AvisClient />
+                    </li>
+                </ul>
+            </section>
+            <section className="pt-32 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto">
+                <Carousel />
             </section>
             <Footer />
         </div>

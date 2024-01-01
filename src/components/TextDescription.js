@@ -1,6 +1,5 @@
 const TextDescription = (props) => {
   const contentDescription = props.TextDescription;
-  console.log(contentDescription.description);
 
   return (
     <div>
