@@ -6,7 +6,7 @@ const Navbar = () => {
             <nav className="shadow-md shadow-gray-100 font-poppins">
                 <div className="flex flex-row justify-between items-center py-2 max-w-screen-xl mx-auto">
                     <div>
-                        <img src={require('../assets/logos/logo_tousAlbatros.png')} className="h-16 w-auto" alt="logo TousAbatros" />
+                        <img src={require('../assets/logos/logo_tousAlbatros.png')} className="h-16 w-auto" alt="Logo TousAbatros" />
                     </div>
                     <ul className="flex flex-row gap-5 text-sm font-semibold text-slate-600">
                         <li>
