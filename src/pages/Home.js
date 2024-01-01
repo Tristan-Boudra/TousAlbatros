@@ -47,9 +47,9 @@ const Home = () => {
     ]
 
     return (
-        <div className="font-poppins">
+        <div>
             <Navbar />
-            <section className="relative">
+            <div className="relative">
                 <div className="flex">
                     <img src={require('../assets/images/home/background_header.png')} className="w-full h-full top-0" alt="Background header" />
                 </div>
@@ -66,10 +66,10 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </section>
-            <section className="pt-20 flex content-center max-w-screen-xl mx-auto">
+            </div>
+            <div className="pt-20 flex content-center">
                 <Icon contentIcon={contentIcon} />
-            </section>
+            </div>
             <section className="pt-32 flex flex-col relative max-w-screen-xl mx-auto">
                 <h2 className="text-4xl text-slate-800 font-bold mx-auto">Les fondatrices</h2>
                 <div className="w-full mx-auto flex flex-col flex-wrap">
