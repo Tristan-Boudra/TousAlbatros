@@ -14,8 +14,8 @@ At TousAlbatros, we believe that constructing a meaningful future begins with un
 
 To launch the website locally, follow these simple steps:
 
-1- Install dependencies: npm install
-2- Start the development server: npm start
+1- Install dependencies: npm install </br>
+2- Start the development server: npm start </br>
 3- Open http://localhost:3000 in your preferred web browser.
 
 Feel free to explore, engage, and be a part of the TousAlbatros journey.
