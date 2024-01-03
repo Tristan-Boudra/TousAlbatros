@@ -8,10 +8,10 @@ const TextDescription = (props) => {
         </p>
       </div>
       <div>
-        <h1 className="text-4xl text-secondary font-bold mt-4">
+        <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-4">
           {contentDescription.title}
         </h1>
-        <p className="text-base font-medium text-quaternary mt-4">
+        <p className="text-sm md:text-base font-medium text-quaternary mt-4">
           {contentDescription.description}
         </p>
       </div>

@@ -11,11 +11,11 @@ import {
 const Services = () => {
   return (
     <div>
-      <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section className="pt-16 md:pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
         <TextDescriptionPrestation data={contentDescriptionPrestation} />
       </section>
       <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
-        <p className="font-medium text-secondary">
+        <p className="font-medium text-sm text-secondary">
           Cliquez sur notre brochure pour visualiser notre offre d’ateliers
           d’Envol.
         </p>

@@ -8,8 +8,8 @@ import { contentIcon, contentDescription } from "../data/index";
 const Home = () => {
   return (
     <div>
-      <div className="relative">
-        <div className="flex">
+      <section className="relative pt-52 md:pt-0 px-10 md:px-0 flex flex-col max-w-screen-xl md:max-w-full mx-auto">
+        <div className="hidden md:block">
           <img
             src={require("../assets/images/home/background_header.png")}
             className="w-full h-full top-0"
@@ -18,7 +18,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col w-max items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className=" font-bold items-center text-secondary text-center">
-            <h1 className="text-xl md:text-2xl lg:text-5xl">
+            <h1 className="text-xl md:text-2xl lg:text-5xl text-secondary">
               <strong className="text-primary text-xl md:text-3xl lg:text-7xl">
                 Tous Albatros
               </strong>
@@ -26,25 +26,25 @@ const Home = () => {
             </h1>
           </div>
           <div className="flex flex-row gap-10 pt-6 md:pt-20">
-            <button className="bg-primary rounded-full px-6 py-2 w-auto h-auto">
+            <button className="bg-primary rounded-full px-3 md:px-6 md:py-2 w-32 md:w-auto h-8 md:h-auto">
               <Link
                 to="/contact"
-                className="text-xs md:text-sm text-white font-medium"
+                className="flex text-xs md:text-sm text-white font-medium justify-center items-center"
               >
                 Nous contacter
               </Link>
             </button>
-            <button className="bg-white rounded-full px-6 py-2 w-auto h-auto">
+            <button className="bg-transparent md:bg-white rounded-full px-3 md:px-6 md:py-2 w-32 md:w-auto h-8 md:h-auto border border-primary md:border-none">
               <Link
                 to="/services"
-                className="text-xs md:text-sm text-secondary font-medium"
+                className="flex text-xs md:text-sm text-secondary font-medium justify-center items-center"
               >
                 Prestations
               </Link>
             </button>
           </div>
         </div>
-      </div>
+      </section>
       <div className="pt-20 flex content-center justify-center">
         <Icon data={contentIcon} />
       </div>

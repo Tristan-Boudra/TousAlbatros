@@ -22,14 +22,12 @@ const Navbar = () => {
   return (
     <>
       <nav className="shadow-md shadow-gray-100 font-poppins">
-        <div className="flex flex-row justify-between items-center py-2 max-w-screen-xl mx-auto">
-          <div>
-            <img
-              src={require("../../assets/logos/logo_tousAlbatros.png")}
-              className="h-16 w-auto"
-              alt="Logo TousAbatros"
-            />
-          </div>
+        <div className="flex flex-row justify-between items-center py-2 px-4 max-w-screen-xl mx-auto">
+          <img
+            src={require("../../assets/logos/logo_tousAlbatros.png")}
+            className="h-20 w-auto"
+            alt="Logo TousAbatros"
+          />
           <div className="lg:hidden" onClick={openModal}>
             {burgerIcon}
           </div>
@@ -93,6 +91,15 @@ const Navbar = () => {
                   onClick={closeModal}
                 >
                   Prestations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-tertiary"
+                  onClick={closeModal}
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

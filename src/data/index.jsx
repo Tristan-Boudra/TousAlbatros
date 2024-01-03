@@ -17,62 +17,62 @@ import {
 } from "lucide-react";
 
 const TrendingUpIcon = (
-  <TrendingUp className="flex text-primary items-center mx-auto" size={40} />
+  <TrendingUp className="flex text-primary items-center mx-auto" size={30} />
 );
 const UsersIcon = (
-  <Users className="flex text-primary items-center mx-auto" size={40} />
+  <Users className="flex text-primary items-center mx-auto" size={30} />
 );
 const BadgeCheckIcon = (
-  <BadgeCheck className="flex text-primary items-center mx-auto" size={40} />
+  <BadgeCheck className="flex text-primary items-center mx-auto" size={30} />
 );
 const LightbulbIcon = (
-  <Lightbulb className="flex text-primary items-center mx-auto" size={40} />
+  <Lightbulb className="flex text-primary items-center mx-auto" size={30} />
 );
 const FileIcon = (
-  <File className="flex text-primary items-center mx-auto" size={40} />
+  <File className="flex text-primary items-center mx-auto" size={30} />
 );
 const PrinterIcon = (
-  <Printer className="flex text-primary items-center mx-auto" size={40} />
+  <Printer className="flex text-primary items-center mx-auto" size={30} />
 );
 const HomeIcon = (
-  <Home className="flex text-primary items-center mx-auto" size={40} />
+  <Home className="flex text-primary items-center mx-auto" size={30} />
 );
 const Prestation = (
-  <Presentation className="flex text-primary items-center mx-auto" size={40} />
+  <Presentation className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const UserCogIcon = (
-  <UserCog className="flex text-primary items-center mx-auto" size={40} />
+  <UserCog className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const HeartHandIcon = (
   <HeartHandshake
     className="flex text-primary items-center mx-auto"
-    size={40}
+    size={30}
   />
 );
 
 const UserCheckIcon = (
-  <UserCheck className="flex text-primary items-center mx-auto" size={40} />
+  <UserCheck className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const BirdIcon = (
-  <Bird className="flex text-primary items-center mx-auto" size={40} />
+  <Bird className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const SliderHorizontalIcon = (
   <SlidersHorizontal
     className="flex text-primary items-center mx-auto"
-    size={40}
+    size={30}
   />
 );
 
 const PuzzlePieceIcon = (
-  <Puzzle className="flex text-primary items-center mx-auto" size={40} />
+  <Puzzle className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const SmileIcon = (
-  <Smile className="flex text-primary items-center mx-auto" size={40} />
+  <Smile className="flex text-primary items-center mx-auto" size={30} />
 );
 
 const contentIcon = [

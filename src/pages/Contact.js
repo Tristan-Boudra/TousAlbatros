@@ -1,24 +1,26 @@
 const Contact = () => {
   return (
     <div className="pb-10">
-      <div className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32">
+      <div className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32 md:px-10 md:gap-10">
         <div className="px-10 lg:px-0 lg:w-1/3">
           <h2 className="text-3xl font-semibold text-secondary">
             Nous sommes{" "}
             <span className="text-primary font-bold">à votre disposition</span>{" "}
             pour discuter
           </h2>
-          <p className="mt-5">
+          <p className="mt-5 text-secondary">
             Notre équipe est disponible de 9h à 17h30, du lundi au jeudi et sera
             ravie d'échanger avec vous.
           </p>
         </div>
-        <div className="w-2/3 border p-10 rounded-lg mt-20 lg:mt-0">
-          <h1 className="text-secondary text-3xl font-bold">Nous contacter</h1>
+        <div className="w-10/12 md:w-2/3 border p-5 md:p-10 rounded-lg mt-20 lg:mt-0">
+          <h1 className="text-secondary text-2xl md:text-4xl font-bold">
+            Nous contacter
+          </h1>
           <div className="flex flex-col lg:flex-row lg:gap-10 mt-10">
             <div className="lg:w-1/2">
               <div className="flex flex-col">
-                <label>
+                <label className="text-secondary">
                   Nom : <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -28,7 +30,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col mt-5">
-                <label>
+                <label className="text-secondary">
                   Email : <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -40,7 +42,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex flex-col lg:w-1/2">
-              <label>
+              <label className="text-secondary">
                 Prénom : <span className="text-red-500">*</span>
               </label>
               <input
@@ -52,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="lg:mt-5">
-            <label>
+            <label className="text-secondary">
               Message : <span className="text-red-500">*</span>
             </label>
             <textarea
