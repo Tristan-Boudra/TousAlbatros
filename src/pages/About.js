@@ -1,5 +1,3 @@
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
 import TextDescription from "../components/textDescription/TextDescription";
 import Team from "../components/team";
 import Values from "../components/values";
@@ -15,7 +13,6 @@ import {
 const About = () => {
   return (
     <div>
-      <Navbar />
       <section className="pt-32 px-10 flex flex-col md:flex-row items-center relative max-w-screen-xl mx-auto">
         <div>
           <p className="text-secondary text-3xl font-bold">
@@ -75,7 +72,6 @@ const About = () => {
           <Team data={team} />
         </div>
       </section>
-      <Footer />
     </div>
   );
 };

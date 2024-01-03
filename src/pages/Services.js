@@ -1,5 +1,3 @@
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
 import TextDescription from "../components/textDescription/TextDescription";
 import ActionOpenPdf from "../components/actionOpenPdf";
 import TextDescriptionPrestation from "../components/textDescriptionPrestation";
@@ -13,7 +11,6 @@ import {
 const Services = () => {
   return (
     <div>
-      <Navbar />
       <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
         <TextDescriptionPrestation data={contentDescriptionPrestation} />
       </section>
@@ -32,7 +29,6 @@ const Services = () => {
       <section className="py-16 px-10 flex flex-col relative max-w-screen-xl mx-auto">
         <ActionOpenPdf data={contentIconAction} />
       </section>
-      <Footer />
     </div>
   );
 };

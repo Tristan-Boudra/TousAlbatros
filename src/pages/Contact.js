@@ -1,9 +1,6 @@
-import Navbar from "../components/navbar/Navbar";
-
 const Contact = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="pb-10">
       <div className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32">
         <div className="px-10 lg:px-0 lg:w-1/3">
           <h2 className="text-3xl font-semibold text-secondary">

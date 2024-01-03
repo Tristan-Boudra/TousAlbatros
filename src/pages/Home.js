@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar/Navbar";
-import Icon from "../components/header/Icon";
+import Icon from "../components/Icon/Icon";
 import TextDescription from "../components/textDescription/TextDescription";
-import Footer from "../components/footer/Footer";
 import AvisClient from "../components/avisClient/avisClient";
 import Carousel from "../components/carousel/carousel";
 import { contentIcon, contentDescription } from "../data/index";
@@ -10,7 +8,6 @@ import { contentIcon, contentDescription } from "../data/index";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className="relative">
         <div className="flex">
           <img
@@ -73,7 +70,6 @@ const Home = () => {
       <section className="pt-32 py-10 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto">
         <Carousel />
       </section>
-      <Footer />
     </div>
   );
 };
