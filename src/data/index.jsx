@@ -7,6 +7,13 @@ import {
   Printer,
   Home,
   Presentation,
+  UserCog,
+  HeartHandshake,
+  Smile,
+  UserCheck,
+  Bird,
+  SlidersHorizontal,
+  Puzzle,
 } from "lucide-react";
 
 const TrendingUpIcon = (
@@ -32,6 +39,40 @@ const HomeIcon = (
 );
 const Prestation = (
   <Presentation className="flex text-primary items-center mx-auto" size={40} />
+);
+
+const UserCogIcon = (
+  <UserCog className="flex text-primary items-center mx-auto" size={40} />
+);
+
+const HeartHandIcon = (
+  <HeartHandshake
+    className="flex text-primary items-center mx-auto"
+    size={40}
+  />
+);
+
+const UserCheckIcon = (
+  <UserCheck className="flex text-primary items-center mx-auto" size={40} />
+);
+
+const BirdIcon = (
+  <Bird className="flex text-primary items-center mx-auto" size={40} />
+);
+
+const SliderHorizontalIcon = (
+  <SlidersHorizontal
+    className="flex text-primary items-center mx-auto"
+    size={40}
+  />
+);
+
+const PuzzlePieceIcon = (
+  <Puzzle className="flex text-primary items-center mx-auto" size={40} />
+);
+
+const SmileIcon = (
+  <Smile className="flex text-primary items-center mx-auto" size={40} />
 );
 
 const contentIcon = [
@@ -159,21 +200,21 @@ const team = [
 const valuesTop = [
   {
     id: 0,
-    icon: UsersIcon,
+    icon: UserCogIcon,
     title: "Imperfection",
     subtitle:
       "S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
   },
   {
     id: 1,
-    icon: UsersIcon,
+    icon: HeartHandIcon,
     title: "Confiance",
     subtitle:
       "Accorder sa confiance à priori en tentant de dépasser ses propres préjugés",
   },
   {
     id: 2,
-    icon: UsersIcon,
+    icon: UserCheckIcon,
     title: "Disponibilité",
     subtitle: "Adopter une posture d’écoute et accorder du temps à l’autre",
   },
@@ -182,13 +223,13 @@ const valuesTop = [
 const valuesMiddle = [
   {
     id: 0,
-    icon: UsersIcon,
+    icon: BirdIcon,
     title: "Douceur",
     subtitle: "Regarder avec tendresse et accorder du temps à l’autre",
   },
   {
     id: 1,
-    icon: UsersIcon,
+    icon: SliderHorizontalIcon,
     title: "Adaptabilité",
     subtitle:
       "Accueillir et rendre accessible les services de l’association à tous",
@@ -198,13 +239,13 @@ const valuesMiddle = [
 const valuesBottom = [
   {
     id: 0,
-    icon: UsersIcon,
+    icon: PuzzlePieceIcon,
     title: "Complémentarité",
     subtitle: "Admettre la compétence d’autrui et orienter",
   },
   {
     id: 1,
-    icon: UsersIcon,
+    icon: SmileIcon,
     title: "Auto-réalisation",
     subtitle: "Accompagner l’autre vers sa propre réalisation",
   },
