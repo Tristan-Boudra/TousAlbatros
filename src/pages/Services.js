@@ -1,4 +1,4 @@
-import TextDescription from "../components/textDescription/TextDescription";
+import TextDescription from "../components/textDescription";
 import ActionOpenPdf from "../components/actionOpenPdf";
 import TextDescriptionPrestation from "../components/textDescriptionPrestation";
 import {

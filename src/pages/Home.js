@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Icon from "../components/Icon/Icon";
-import TextDescription from "../components/textDescription/TextDescription";
-import AvisClient from "../components/avisClient/avisClient";
-import Carousel from "../components/carousel/carousel";
+import Icon from "../components/Icon";
+import TextDescription from "../components/textDescription";
+import AvisClient from "../components/avisClient";
+import Carousel from "../components/carousel";
 import { contentIcon, contentDescription } from "../data/index";
 
 const Home = () => {

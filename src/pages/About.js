@@ -1,4 +1,4 @@
-import TextDescription from "../components/textDescription/TextDescription";
+import TextDescription from "../components/textDescription";
 import Team from "../components/team";
 import Values from "../components/values";
 import ValuesWithImage from "../components/valuesWithImage";
