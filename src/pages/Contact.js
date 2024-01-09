@@ -1,4 +1,26 @@
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fhd2nly",
+        "template_k0r3vit",
+        "#emailForm",
+        "7FUVxDYGr3haA5Uw2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="pb-10">
       <div className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32 md:px-10 md:gap-10">
@@ -13,7 +35,12 @@ const Contact = () => {
             ravie d'échanger avec vous.
           </p>
         </div>
-        <div className="w-10/12 md:w-2/3 border p-5 md:p-10 rounded-lg mt-20 lg:mt-0">
+        <form
+          action="POST"
+          id="emailForm"
+          onSubmit={handleFormSubmit}
+          className="w-10/12 md:w-2/3 border p-5 md:p-10 rounded-lg mt-20 lg:mt-0"
+        >
           <h1 className="text-secondary text-2xl md:text-4xl font-bold">
             Nous contacter
           </h1>
@@ -25,6 +52,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Nom"
                   className="border rounded h-8 placeholder-placeholder"
                 />
@@ -35,22 +63,40 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="email"
                   placeholder="Email"
                   className="border rounded h-8 placeholder-placeholder"
+                  id="email-from"
                 />
                 <br />
               </div>
             </div>
-            <div className="flex flex-col lg:w-1/2">
-              <label className="text-secondary">
-                Prénom : <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Prénom"
-                className="border rounded h-8 placeholder-placeholder"
-              />
-              <br />
+            <div className="lg:w-1/2">
+              <div className="flex flex-col">
+                <label className="text-secondary">
+                  Prénom : <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="surname"
+                  placeholder="Prénom"
+                  className="border rounded h-8 placeholder-placeholder"
+                />
+                <br />
+              </div>
+              <div className="flex flex-col">
+                <label className="text-secondary">
+                  Sujet : <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Sujet"
+                  className="border rounded h-8 placeholder-placeholder"
+                  id="subject"
+                />
+                <br />
+              </div>
             </div>
           </div>
           <div className="lg:mt-5">
@@ -59,17 +105,22 @@ const Contact = () => {
             </label>
             <textarea
               placeholder="Message"
+              name="message"
               className="border rounded w-full placeholder-placeholder"
               rows="6"
+              id="message"
             />
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
             <p className="text-xs">Tous les champs sont obligatoires</p>
-            <button className="bg-primary text-white px-8 py-1 rounded-xl mt-5 lg:mt-0">
+            <button
+              type="submit"
+              className="bg-primary text-white px-8 py-1 rounded-xl mt-5 lg:mt-0"
+            >
               Envoyer
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
