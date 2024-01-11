@@ -300,6 +300,69 @@ const valuesBottom = [
   },
 ];
 
+const reviews = [
+  {
+    id: 0,
+    name: "1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 1,
+    name: "2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 2,
+    name: "3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 3,
+    name: "4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 4,
+    name: "5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 5,
+    name: "6",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 6,
+    name: "7",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 7,
+    name: "8",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 8,
+    name: "9",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 10,
+    name: "10",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+];
+
 export {
   contentIcon,
   contentDescription,
@@ -310,4 +373,5 @@ export {
   valuesTop,
   valuesBottom,
   valuesMiddle,
+  reviews,
 };

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import Icon from "../components/Icon";
 import TextDescription from "../components/textDescription";
-import AvisClient from "../components/avisClient";
-import Carousel from "../components/carousel";
-import { contentIcon, contentDescription } from "../data/index";
-import { useEffect, useRef } from "react";
+import Reviews from "../components/reviews";
+import Brands from "../components/brands";
+import { contentIcon, contentDescription, reviews } from "../data/index";
+import { useEffect, useRef, useState } from "react";
 import ScrollReveal from "scrollreveal";
+import chevronUp from "../assets/images/icon/chevronUp.png";
 
 const Home = () => {
   const box1Ref = useRef();
@@ -29,6 +30,58 @@ const Home = () => {
     ScrollReveal().reveal(box3Ref.current, config);
     ScrollReveal().reveal(box4Ref.current, config);
     ScrollReveal().reveal(box5Ref.current, config);
+  }, []);
+
+  const allReviews = [];
+  reviews.map((review) => {
+    allReviews.push(review);
+    return review;
+  });
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [istablet, setIsTablet] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const nextImage = () => {
+    const newIndex = (currentImageIndex + 1) % allReviews.length;
+    setCurrentImageIndex(newIndex);
+  };
+
+  const prevImage = () => {
+    const newIndex =
+      (currentImageIndex - 1 + allReviews.length) % allReviews.length;
+    setCurrentImageIndex(newIndex);
+  };
+
+  const displayedImages = [];
+
+  if (isMobile) {
+    const index = currentImageIndex % allReviews.length;
+    displayedImages.push(allReviews[index]);
+  } else if (istablet) {
+    for (let i = 0; i < 2; i++) {
+      const index = (currentImageIndex + i) % allReviews.length;
+      displayedImages.push(allReviews[index]);
+    }
+  } else {
+    const startIndex = currentImageIndex % allReviews.length;
+    for (let i = 0; i < 3; i++) {
+      const index = (startIndex + i) % allReviews.length;
+      displayedImages.push(allReviews[index]);
+    }
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setIsTablet(window.innerWidth < 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -89,23 +142,31 @@ const Home = () => {
         className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box4Ref}
       >
-        <ul className="flex flex-col flex-wrap md:flex-row gap-20 md:gap-10 mx-auto">
-          <li>
-            <AvisClient />
-          </li>
-          <li>
-            <AvisClient />
-          </li>
-          <li>
-            <AvisClient />
-          </li>
+        <ul className="flex flex-col flex-wrap md:flex-row gap-20 md:gap-4 mx-auto sm:w-full justify-center">
+          {displayedImages.map((review, index) => (
+            <li>
+              <img
+                alt="chevronPrevImage"
+                src={chevronUp}
+                className="absolute top-80 cursor-pointer w-14 h-14 md:w-20 md:h-20 left-0 transform -translate-y-1/2 rotate-[-90deg]"
+                onClick={prevImage}
+              />
+              <Reviews data={{ ...review, index }} />
+              <img
+                alt="chevronNextImage"
+                src={chevronUp}
+                className="absolute top-80 cursor-pointer w-14 h-14 md:w-20 md:h-20 right-0 transform -translate-y-1/2 rotate-90"
+                onClick={nextImage}
+              />
+            </li>
+          ))}
         </ul>
       </section>
       <section
-        className="pt-32 py-10 px-10 md:px-0 flex flex-col relative max-w-screen-xl mx-auto"
+        className="py-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box5Ref}
       >
-        <Carousel />
+        <Brands />
       </section>
     </div>
   );
