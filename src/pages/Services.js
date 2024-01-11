@@ -1,7 +1,13 @@
 import ActionOpenPdf from "../components/actionOpenPdf";
 import TextDescriptionPrestation from "../components/textDescriptionPrestation";
+import ProjectLeft from "../components/projectLeft";
+import ProjectRight from "../components/projectRight";
 import ScrollReveal from "scrollreveal";
-import { contentDescriptionPrestation, contentIconPrestation } from "../data";
+import {
+  contentDescriptionPrestation,
+  contentIconPrestation,
+  Project,
+} from "../data";
 import { useEffect, useRef } from "react";
 
 const Services = () => {
@@ -28,6 +34,12 @@ const Services = () => {
     ScrollReveal().reveal(box5Ref.current, config);
   }, []);
 
+  const allprojects = Project.map((project) => {
+    return {
+      ...project,
+    };
+  });
+
   return (
     <div>
       <section
@@ -37,7 +49,7 @@ const Services = () => {
         <TextDescriptionPrestation data={contentDescriptionPrestation} />
       </section>
       <section
-        className="py-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box2Ref}
       >
         <p className="font-medium text-sm text-secondary">
@@ -46,6 +58,23 @@ const Services = () => {
         </p>
         <div className="pt-10">
           <ActionOpenPdf data={contentIconPrestation} />
+        </div>
+      </section>
+      <section className="py-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+        <div className="bg-primary/20 w-max rounded-full">
+          <p className="text-primary px-3 py-2 w-auto text-xs">Projets</p>
+        </div>
+        <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-4">
+          Nos projets phares
+        </h1>
+        <div className="flex flex-col gap-10 mt-10">
+          {allprojects.map((project, index) => {
+            return index % 2 === 0 ? (
+              <ProjectRight key={index} data={project} />
+            ) : (
+              <ProjectLeft key={index} data={project} />
+            );
+          })}
         </div>
       </section>
     </div>

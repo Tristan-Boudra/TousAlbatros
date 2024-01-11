@@ -365,6 +365,62 @@ const reviews = [
   },
 ];
 
+const Project = [
+  {
+    id: 0,
+    name: "Tous Albatros T",
+    description: "Tous Albatros",
+    image: [
+      {
+        id: 0,
+        image: require("../assets/logos/supports/1.png"),
+      },
+      {
+        id: 1,
+        image: require("../assets/logos/supports/2.png"),
+      },
+      {
+        id: 2,
+        image: require("../assets/logos/supports/3.png"),
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: "Tous Albatros 2 T",
+    description: "Tous Albatros 2",
+    image: [
+      {
+        id: 0,
+        image: require("../assets/logos/supports/3.png"),
+      },
+      {
+        id: 1,
+        image: require("../assets/logos/supports/4.png"),
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Tous Albatros T",
+    description: "Tous Albatros",
+    image: [
+      {
+        id: 0,
+        image: require("../assets/logos/supports/1.png"),
+      },
+      {
+        id: 1,
+        image: require("../assets/logos/supports/2.png"),
+      },
+      {
+        id: 2,
+        image: require("../assets/logos/supports/3.png"),
+      },
+    ],
+  },
+];
+
 const generateRandomImage = () => faker.image.avatar();
 
 const reviewsWithImages = reviews.map((review) => ({
@@ -382,4 +438,5 @@ export {
   valuesBottom,
   valuesMiddle,
   reviewsWithImages as reviews,
+  Project,
 };
