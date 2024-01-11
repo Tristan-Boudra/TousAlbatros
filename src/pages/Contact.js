@@ -1,30 +1,45 @@
 import emailjs from "@emailjs/browser";
 import illustration from "../assets/images/contact/illustration.png";
 import ScrollReveal from "scrollreveal";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Captcha from "../components/captcha";
 
 const Contact = () => {
+  const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
+  const [errorCaptcha, setErrorCaptcha] = useState(false);
+  const [successSend, setSuccessSend] = useState(false);
+  const box1Ref = useRef();
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_fhd2nly",
-        "template_k0r3vit",
-        "#emailForm",
-        "7FUVxDYGr3haA5Uw2"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+    const form = document.getElementById("emailForm");
 
-  const box1Ref = useRef();
+    if (isCaptchaSolved) {
+      emailjs
+        .sendForm(
+          "service_fhd2nly",
+          "template_k0r3vit",
+          "#emailForm",
+          "7FUVxDYGr3haA5Uw2"
+        )
+        .then(
+          (result) => {
+            setErrorCaptcha(false);
+            setIsCaptchaSolved(true);
+            setTimeout(() => {
+              setSuccessSend(false);
+            }, 5000);
+            form.reset();
+          }
+          // (error) => {
+          //   console.log(error.text);
+          // }
+        );
+    } else {
+      setErrorCaptcha(true);
+    }
+  };
 
   useEffect(() => {
     const config = {
@@ -112,7 +127,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col">
                 <label className="text-secondary">
-                  Sujet : <span className="text-red-500">*</span>
+                  Objet : <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -137,6 +152,19 @@ const Contact = () => {
               id="message"
             />
           </div>
+          <Captcha
+            onCaptchaSuccess={(success) => setIsCaptchaSolved(success)}
+          />
+          {errorCaptcha && (
+            <p className="text-red-500 text-sm mt-5">
+              Veuillez résoudre le Captcha
+            </p>
+          )}
+          {successSend && (
+            <p className="text-green text-sm mt-5">
+              Votre email a été envoyer avec succès !
+            </p>
+          )}
           <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
             <p className="text-xs">Tous les champs sont obligatoires</p>
             <button
