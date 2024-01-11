@@ -8,7 +8,7 @@ const Team = (props) => {
       <div className="relative w-40 h-40 rounded-lg group">
         <img
           src={item.image}
-          className="image-team w-full h-full rounded-lg group-hover:opacity-50"
+          className="image-team w-full h-full rounded-lg group-hover:opacity-30"
           alt={item.name}
         />
         <div className="text-team font-medium text-xl text-quaternary absolute top-0 left-5 mt-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

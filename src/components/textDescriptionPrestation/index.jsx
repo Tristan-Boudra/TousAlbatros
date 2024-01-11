@@ -2,9 +2,7 @@ const TextDescriptionPrestation = (props) => {
   const contentDescriptionPrestation = props.data;
   const listIcon = contentDescriptionPrestation.map((item) => (
     <div className="flex flex-col md:flex-row gap-5 md:gap-10 md:items-center">
-      <div className="flex bg-primary/20 w-12 h-12 md:w-52 md:h-16 rounded-lg content-center items-center">
-        {item.icon}
-      </div>
+      {item.icon}
       <p className="text-sm md:text-base font-medium text-quaternary md:mt-4">
         {item.description}
       </p>

@@ -2,6 +2,7 @@ import TextDescription from "../components/textDescription";
 import Team from "../components/team";
 import Values from "../components/values";
 import ValuesWithImage from "../components/valuesWithImage";
+import ScrollReveal from "scrollreveal";
 import {
   contentDescription,
   team,
@@ -9,11 +10,39 @@ import {
   valuesMiddle,
   valuesTop,
 } from "../data/index";
+import { useEffect, useRef } from "react";
 
 const About = () => {
+  const box1Ref = useRef();
+  const box2Ref = useRef();
+  const box3Ref = useRef();
+  const box4Ref = useRef();
+  const box5Ref = useRef();
+  const box6Ref = useRef();
+
+  useEffect(() => {
+    const config = {
+      origin: "left",
+      duration: 1000,
+      delay: 150,
+      distance: "500px",
+      scale: 1,
+      easing: "ease",
+    };
+
+    ScrollReveal().reveal(box1Ref.current, config);
+    ScrollReveal().reveal(box2Ref.current, config);
+    ScrollReveal().reveal(box3Ref.current, config);
+    ScrollReveal().reveal(box4Ref.current, config);
+    ScrollReveal().reveal(box5Ref.current, config);
+    ScrollReveal().reveal(box6Ref.current, config);
+  }, []);
   return (
     <div>
-      <section className="pt-16 md:pt-32 px-10 flex flex-col md:flex-row items-center relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-16 md:pt-32 px-10 flex flex-col md:flex-row items-center relative max-w-screen-xl mx-auto"
+        ref={box1Ref}
+      >
         <div>
           <p className="text-secondary text-3xl font-bold">
             <span className="text-primary text-4xl">"</span>Tout le monde est un
@@ -29,13 +58,22 @@ const About = () => {
           alt="Background header"
         />
       </section>
-      <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        ref={box2Ref}
+      >
         <TextDescription data={contentDescription[2]} />
       </section>
-      <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        ref={box3Ref}
+      >
         <TextDescription data={contentDescription[3]} />
       </section>
-      <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        ref={box4Ref}
+      >
         <div className="bg-primary/20 w-max rounded-full">
           <p className="text-primary px-3 py-2 w-auto text-xs">Nos valeurs</p>
         </div>
@@ -58,10 +96,16 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        ref={box5Ref}
+      >
         <TextDescription data={contentDescription[4]} />
       </section>
-      <section className="pt-32 pb-10 px-10 flex flex-col relative max-w-screen-xl mx-auto">
+      <section
+        className="pt-32 pb-10 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        ref={box6Ref}
+      >
         <div className="bg-primary/20 w-max rounded-full">
           <p className="text-primary px-3 py-2 w-auto text-xs">Equipe</p>
         </div>

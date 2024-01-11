@@ -17,62 +17,105 @@ import {
 } from "lucide-react";
 
 const TrendingUpIcon = (
-  <TrendingUp className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <TrendingUp className="flex text-orange items-center mx-auto" size={30} />
+  </div>
 );
+
 const UsersIcon = (
-  <Users className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Users className="flex text-green items-center mx-auto" size={30} />
+  </div>
 );
+
 const BadgeCheckIcon = (
-  <BadgeCheck className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <BadgeCheck
+      className="flex text-turquoise items-center mx-auto"
+      size={30}
+    />
+  </div>
 );
+
 const LightbulbIcon = (
-  <Lightbulb className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-primary/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Lightbulb className="flex text-primary items-center mx-auto" size={30} />
+  </div>
 );
+
 const FileIcon = (
-  <File className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 rounded-lg p-4 content-center items-center">
+    <File className="flex text-green items-center mx-auto" size={30} />
+  </div>
 );
+
 const PrinterIcon = (
-  <Printer className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Printer className="flex text-turquoise items-center mx-auto" size={30} />
+  </div>
 );
+
 const HomeIcon = (
-  <Home className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Home className="flex text-green items-center mx-auto" size={30} />
+  </div>
 );
+
 const Prestation = (
-  <Presentation className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Presentation
+      className="flex text-turquoise items-center mx-auto"
+      size={30}
+    />
+  </div>
 );
 
 const UserCogIcon = (
-  <UserCog className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <UserCog className="flex text-orange items-center mx-auto" size={30} />
+  </div>
 );
 
 const HeartHandIcon = (
-  <HeartHandshake
-    className="flex text-primary items-center mx-auto"
-    size={30}
-  />
+  <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <HeartHandshake
+      className="flex text-orange items-center mx-auto"
+      size={30}
+    />
+  </div>
 );
 
 const UserCheckIcon = (
-  <UserCheck className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <UserCheck className="flex text-orange items-center mx-auto" size={30} />
+  </div>
 );
 
 const BirdIcon = (
-  <Bird className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Bird className="flex text-green items-center mx-auto" size={30} />
+  </div>
 );
 
 const SliderHorizontalIcon = (
-  <SlidersHorizontal
-    className="flex text-primary items-center mx-auto"
-    size={30}
-  />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <SlidersHorizontal
+      className="flex text-green items-center mx-auto"
+      size={30}
+    />
+  </div>
 );
 
 const PuzzlePieceIcon = (
-  <Puzzle className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-primary/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Puzzle className="flex text-primary items-center mx-auto" size={30} />
+  </div>
 );
 
 const SmileIcon = (
-  <Smile className="flex text-primary items-center mx-auto" size={30} />
+  <div className="flex bg-primary/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Smile className="flex text-primary items-center mx-auto" size={30} />
+  </div>
 );
 
 const contentIcon = [
@@ -81,24 +124,28 @@ const contentIcon = [
     icon: TrendingUpIcon,
     title: "+ 8 ans",
     subtitle: "Expérience",
+    color: "yellow",
   },
   {
     id: 1,
     icon: UsersIcon,
     title: "100 %",
     subtitle: "Engagés",
+    color: "green",
   },
   {
     id: 2,
     icon: BadgeCheckIcon,
     title: "100 %",
     subtitle: "Réactifs",
+    color: "turquoise",
   },
   {
     id: 3,
     icon: LightbulbIcon,
     title: "∞",
     subtitle: "Projets innovants",
+    color: "primary",
   },
 ];
 
@@ -167,14 +214,15 @@ const contentIconPrestation = [
     id: 0,
     icon: FileIcon,
     title: "Brochure web",
-    subtitle: "Cliquer pour visualiser la brochure numérique",
+    subtitle:
+      "Pour télécharger et imprimer la brochure de nos ateliers d'envol",
     linkPdf: require("../assets/documents/test.pdf"),
   },
   {
     id: 1,
     icon: PrinterIcon,
     title: "Brochure imprimable",
-    subtitle: "Cliquer pour imprimer la brochure papier",
+    subtitle: "Pour recevoir une proposition d'ateliers sur mesure",
   },
 ];
 
@@ -203,20 +251,21 @@ const valuesTop = [
     icon: UserCogIcon,
     title: "Imperfection",
     subtitle:
-      "S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
+      "S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
   },
   {
     id: 1,
     icon: HeartHandIcon,
     title: "Confiance",
     subtitle:
-      "Accorder sa confiance à priori en tentant de dépasser ses propres préjugés",
+      "Accorder sa confiance à priori en tentant de dépasser ses propres préjugés. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
   },
   {
     id: 2,
     icon: UserCheckIcon,
     title: "Disponibilité",
-    subtitle: "Adopter une posture d’écoute et accorder du temps à l’autre",
+    subtitle:
+      "Adopter une posture d’écoute et accorder du temps à l’autre. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
   },
 ];
 

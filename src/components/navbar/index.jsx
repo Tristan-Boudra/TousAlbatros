@@ -33,17 +33,32 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex flex-row gap-5 font-medium text-quaternary">
             <li>
-              <NavLink to="/" className="hover:text-tertiary">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-primary" : "text-tertiary"
+                }
+              >
                 Accueil
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="hover:text-tertiary">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-primary" : "text-tertiary"
+                }
+              >
                 A propos
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-tertiary">
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive ? "text-primary" : "text-tertiary"
+                }
+              >
                 Prestations
               </NavLink>
             </li>
@@ -57,7 +72,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-10 bg-black bg-opacity-50 flex">

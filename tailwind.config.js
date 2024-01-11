@@ -9,8 +9,10 @@ module.exports = {
         tertiary: "#64748B",
         quaternary: "#334155",
         placeholder: "#CBD5E1",
-        green: "",
-        yellow: "",
+        green: "#BBE18C",
+        yellow: "#FEEF70",
+        turquoise: "#78CFBA",
+        orange: "#FFC000",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -1,10 +1,11 @@
 const ActionOpenPdf = (props) => {
   const contentIcon = props.data;
   const listIcon = contentIcon.map((item) => (
-    <a href={item.linkPdf} className="flex items-center gap-5 md:gap-0">
-      <div className="flex bg-primary/20 w-12 h-12 md:w-16 md:h-16 rounded-lg content-center items-center">
-        {item.icon}
-      </div>
+    <a
+      href={item.linkPdf}
+      className="flex flex-col flex-start md:flex-row md:items-center gap-5 md:gap-0"
+    >
+      {item.icon}
       <div className="flex flex-col md:ml-3 mt-2 md:mt-0 w-72">
         <p className="text-xl md:text-2xl font-medium text-secondary">
           {item.title}

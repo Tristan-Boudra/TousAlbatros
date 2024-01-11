@@ -1,4 +1,7 @@
 import emailjs from "@emailjs/browser";
+import illustration from "../assets/images/contact/illustration.png";
+import ScrollReveal from "scrollreveal";
+import { useEffect, useRef } from "react";
 
 const Contact = () => {
   const handleFormSubmit = (e) => {
@@ -21,9 +24,27 @@ const Contact = () => {
       );
   };
 
+  const box1Ref = useRef();
+
+  useEffect(() => {
+    const config = {
+      origin: "left",
+      duration: 1000,
+      delay: 150,
+      distance: "500px",
+      scale: 1,
+      easing: "ease",
+    };
+
+    ScrollReveal().reveal(box1Ref.current, config);
+  }, []);
+
   return (
     <div className="pb-10">
-      <div className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32 md:px-10 md:gap-10">
+      <div
+        className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32 md:px-10 md:gap-10"
+        ref={box1Ref}
+      >
         <div className="px-10 lg:px-0 lg:w-1/3">
           <h2 className="text-3xl font-semibold text-secondary">
             Nous sommes{" "}
@@ -34,6 +55,11 @@ const Contact = () => {
             Notre équipe est disponible de 9h à 17h30, du lundi au jeudi et sera
             ravie d'échanger avec vous.
           </p>
+          <img
+            src={illustration}
+            className="h-56 mx-auto"
+            alt="Illustration Tous Albatros"
+          />
         </div>
         <form
           action="POST"
