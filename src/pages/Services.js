@@ -1,13 +1,7 @@
-import TextDescription from "../components/textDescription";
 import ActionOpenPdf from "../components/actionOpenPdf";
 import TextDescriptionPrestation from "../components/textDescriptionPrestation";
 import ScrollReveal from "scrollreveal";
-import {
-  contentDescriptionPrestation,
-  contentIconPrestation,
-  contentDescription,
-  contentIconAction,
-} from "../data";
+import { contentDescriptionPrestation, contentIconPrestation } from "../data";
 import { useEffect, useRef } from "react";
 
 const Services = () => {
@@ -43,28 +37,16 @@ const Services = () => {
         <TextDescriptionPrestation data={contentDescriptionPrestation} />
       </section>
       <section
-        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
+        className="py-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box2Ref}
       >
         <p className="font-medium text-sm text-secondary">
           Cliquez sur notre brochure pour visualiser notre offre d’ateliers
           d’Envol.
         </p>
-        <div className="pt-20">
+        <div className="pt-10">
           <ActionOpenPdf data={contentIconPrestation} />
         </div>
-      </section>
-      <section
-        className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
-        ref={box3Ref}
-      >
-        <TextDescription data={contentDescription[5]} />
-      </section>
-      <section
-        className="py-16 px-10 flex flex-col relative max-w-screen-xl mx-auto"
-        ref={box4Ref}
-      >
-        <ActionOpenPdf data={contentIconAction} />
       </section>
     </div>
   );

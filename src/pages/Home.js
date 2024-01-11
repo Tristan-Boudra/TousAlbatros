@@ -33,8 +33,11 @@ const Home = () => {
   }, []);
 
   const allReviews = [];
+
   reviews.map((review) => {
-    allReviews.push(review);
+    allReviews.push({
+      ...review,
+    });
     return review;
   });
 

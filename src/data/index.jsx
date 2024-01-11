@@ -4,7 +4,7 @@ import {
   BadgeCheck,
   Lightbulb,
   File,
-  Printer,
+  MessageSquare,
   Home,
   Presentation,
   UserCog,
@@ -15,6 +15,7 @@ import {
   SlidersHorizontal,
   Puzzle,
 } from "lucide-react";
+import { faker } from "@faker-js/faker";
 
 const TrendingUpIcon = (
   <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
@@ -49,9 +50,12 @@ const FileIcon = (
   </div>
 );
 
-const PrinterIcon = (
+const MessageIcon = (
   <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
-    <Printer className="flex text-turquoise items-center mx-auto" size={30} />
+    <MessageSquare
+      className="flex text-turquoise items-center mx-auto"
+      size={30}
+    />
   </div>
 );
 
@@ -220,15 +224,13 @@ const contentIconPrestation = [
   },
   {
     id: 1,
-    icon: PrinterIcon,
-    title: "Brochure imprimable",
+    icon: MessageIcon,
+    title: "Contact",
     subtitle: "Pour recevoir une proposition d'ateliers sur mesure",
+    linkPdf: "/contact",
   },
-];
-
-const contentIconAction = [
   {
-    id: 0,
+    id: 2,
     icon: FileIcon,
     title: "Actions éducatives",
     subtitle: "Cliquer pour visualiser la brochure",
@@ -363,15 +365,21 @@ const reviews = [
   },
 ];
 
+const generateRandomImage = () => faker.image.avatar();
+
+const reviewsWithImages = reviews.map((review) => ({
+  ...review,
+  image: generateRandomImage(),
+}));
+
 export {
   contentIcon,
   contentDescription,
   contentDescriptionPrestation,
   contentIconPrestation,
-  contentIconAction,
   team,
   valuesTop,
   valuesBottom,
   valuesMiddle,
-  reviews,
+  reviewsWithImages as reviews,
 };

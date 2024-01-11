@@ -3,9 +3,10 @@ const Footer = () => {
   const facebook = require("../../assets/logos/brands/facebook.png");
   const instagram = require("../../assets/logos/brands/instagram.png");
   const tiktok = require("../../assets/logos/brands/tiktok.png");
-  const snapchat = require("../../assets/logos/brands/snapchat.webp");
+  const snapchat = require("../../assets/logos/brands/snapchat.png");
 
   const currentYear = new Date().getFullYear();
+
   return (
     <footer className="flex flex-col gap-10 md:gap-0 justify-between items-center md:items-start max-w-screen-xl mx-auto p-10 border-t-2">
       <div className="flex flex-col md:flex-row gap-10 justify-between w-full">
@@ -26,8 +27,16 @@ const Footer = () => {
             <h3 className="text-secondary text-lg font-bold">
               Où sommes-nous ?
             </h3>
-            <p className="text-tertiary mt-3 w-1/2 md:w-64 text-center md:text-left">
-              Maison des Associations, 93 la Canebière, boîte aux lettres n°160,
+            <p className="text-tertiary w-1/2 md:w-64 text-center md:text-left">
+              Maison des Associations,
+            </p>
+            <p className="text-tertiary w-1/2 md:w-64 text-center md:text-left">
+              93 la Canebière,
+            </p>
+            <p className="text-tertiary w-1/2 md:w-64 text-center md:text-left">
+              boite aux lettre n°160,
+            </p>
+            <p className="text-tertiary w-1/2 md:w-64 text-center md:text-left">
               13001 MARSEILLE
             </p>
           </div>
@@ -47,7 +56,7 @@ const Footer = () => {
           © {currentYear}. Tous droits réservés |{" "}
           <a href="/mentions-legales">Mentions légales</a>
         </p>
-        <ul className="flex flex-col md:flex-row gap-3 align-center">
+        <ul className="flex flex-col items-center md:flex-row gap-3 align-center">
           <li>
             <a href="/" target="_blank" rel="noreferrer">
               <img src={linkedin} className="h-10 w-10" alt="Logo Linkedin" />
@@ -70,7 +79,7 @@ const Footer = () => {
           </li>
           <li>
             <a href="/" target="_blank" rel="noreferrer">
-              <img src={snapchat} className="h-12 w-12" alt="Logo Snapchat" />
+              <img src={snapchat} className="h-9 w-9" alt="Logo Snapchat" />
             </a>
           </li>
         </ul>

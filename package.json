@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dicebear/collection": "^5.3.5",
+    "@dicebear/core": "^5.3.5",
     "@emailjs/browser": "^3.11.0",
     "@react-email/components": "0.0.12",
+    "@resvg/resvg-js": "^2.6.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.5.1",
+    "exiftool-vendored": "^16.5.1",
     "lucide-react": "^0.263.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "scrollreveal": "^4.0.9",
+    "sharp": "^0.30.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "purify-css": "^1.2.5",
