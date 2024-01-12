@@ -23,6 +23,7 @@ const Home = () => {
       distance: "500px",
       scale: 1,
       easing: "ease",
+      reset: true,
     };
 
     ScrollReveal().reveal(box1Ref.current, config);
@@ -145,20 +146,26 @@ const Home = () => {
         className="pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box4Ref}
       >
-        <ul className="flex flex-col flex-wrap md:flex-row gap-20 md:gap-4 mx-auto sm:w-full justify-center">
+        <div className="bg-primary/20 w-max rounded-full">
+          <p className="text-primary px-3 py-2 w-auto text-xs">Projets</p>
+        </div>
+        <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-4">
+          Nos projets phares
+        </h1>
+        <ul className="flex flex-col flex-wrap md:flex-row gap-20 md:gap-4 mx-auto sm:w-full justify-center mt-24">
           {displayedImages.map((review, index) => (
             <li>
               <img
                 alt="chevronPrevImage"
                 src={chevronUp}
-                className="absolute top-80 cursor-pointer w-14 h-14 md:w-20 md:h-20 left-0 transform -translate-y-1/2 rotate-[-90deg]"
+                className="absolute top-[30rem] cursor-pointer w-14 h-14 md:w-20 md:h-20 left-0 transform -translate-y-1/2 rotate-[-90deg]"
                 onClick={prevImage}
               />
               <Reviews data={{ ...review, index }} />
               <img
                 alt="chevronNextImage"
                 src={chevronUp}
-                className="absolute top-80 cursor-pointer w-14 h-14 md:w-20 md:h-20 right-0 transform -translate-y-1/2 rotate-90"
+                className="absolute top-[30rem] cursor-pointer w-14 h-14 md:w-20 md:h-20 right-0 transform -translate-y-1/2 rotate-90"
                 onClick={nextImage}
               />
             </li>

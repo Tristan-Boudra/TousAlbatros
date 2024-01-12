@@ -14,8 +14,8 @@ import {
   Bird,
   SlidersHorizontal,
   Puzzle,
+  Library,
 } from "lucide-react";
-import { faker } from "@faker-js/faker";
 
 const TrendingUpIcon = (
   <div className="flex bg-orange/10 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
@@ -45,32 +45,32 @@ const LightbulbIcon = (
 );
 
 const FileIcon = (
-  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 rounded-lg p-4 content-center items-center">
-    <File className="flex text-green items-center mx-auto" size={30} />
+  <div className="flex bg-orange/20 w-12 h-12 md:w-16 md:h-16 rounded-lg p-4 content-center items-center">
+    <File className="flex text-orange items-center mx-auto" size={30} />
   </div>
 );
 
 const MessageIcon = (
-  <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
-    <MessageSquare
-      className="flex text-turquoise items-center mx-auto"
-      size={30}
-    />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <MessageSquare className="flex text-green items-center mx-auto" size={30} />
+  </div>
+);
+
+const LibrairieIcon = (
+  <div className="flex bg-primary/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Library className="flex text-primary items-center mx-auto" size={30} />
   </div>
 );
 
 const HomeIcon = (
-  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
-    <Home className="flex text-green items-center mx-auto" size={30} />
+  <div className="flex bg-orange/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Home className="flex text-orange items-center mx-auto" size={30} />
   </div>
 );
 
 const Prestation = (
-  <div className="flex bg-turquoise/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
-    <Presentation
-      className="flex text-turquoise items-center mx-auto"
-      size={30}
-    />
+  <div className="flex bg-green/20 w-12 h-12 md:w-16 md:h-16 p-4 rounded-lg content-center items-center">
+    <Presentation className="flex text-green items-center mx-auto" size={30} />
   </div>
 );
 
@@ -231,7 +231,7 @@ const contentIconPrestation = [
   },
   {
     id: 2,
-    icon: FileIcon,
+    icon: LibrairieIcon,
     title: "Actions éducatives",
     subtitle: "Cliquer pour visualiser la brochure",
     linkPdf: require("../assets/documents/test.pdf"),
@@ -421,11 +421,11 @@ const Project = [
   },
 ];
 
-const generateRandomImage = () => faker.image.avatar();
-
 const reviewsWithImages = reviews.map((review) => ({
   ...review,
-  image: generateRandomImage(),
+  image: `https://avatar.iran.liara.run/public/${Math.floor(
+    Math.random() * (100 - 1 + 1) + 1
+  )}`,
 }));
 
 export {

@@ -95,7 +95,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   placeholder="Nom"
-                  className="border rounded h-8 placeholder-placeholder"
+                  className="border rounded h-8 placeholder-placeholder pl-3"
                 />
               </div>
               <div className="flex flex-col mt-5">
@@ -106,7 +106,7 @@ const Contact = () => {
                   type="text"
                   name="email"
                   placeholder="Email"
-                  className="border rounded h-8 placeholder-placeholder"
+                  className="border rounded h-8 placeholder-placeholder pl-3"
                   id="email-from"
                 />
                 <br />
@@ -121,7 +121,7 @@ const Contact = () => {
                   type="text"
                   name="surname"
                   placeholder="Prénom"
-                  className="border rounded h-8 placeholder-placeholder"
+                  className="border rounded h-8 placeholder-placeholder pl-3"
                 />
                 <br />
               </div>
@@ -132,8 +132,8 @@ const Contact = () => {
                 <input
                   type="text"
                   name="subject"
-                  placeholder="Sujet"
-                  className="border rounded h-8 placeholder-placeholder"
+                  placeholder="Objet"
+                  className="border rounded h-8 placeholder-placeholder pl-3"
                   id="subject"
                 />
                 <br />
@@ -147,7 +147,7 @@ const Contact = () => {
             <textarea
               placeholder="Message"
               name="message"
-              className="border rounded w-full placeholder-placeholder"
+              className="border rounded w-full placeholder-placeholder pl-3 pt-2"
               rows="6"
               id="message"
             />
@@ -166,7 +166,10 @@ const Contact = () => {
             </p>
           )}
           <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
-            <p className="text-xs">Tous les champs sont obligatoires</p>
+            <p className="text-xs">
+              <span className="text-red-500">*</span> Tous les champs sont
+              obligatoires
+            </p>
             <button
               type="submit"
               className="bg-primary text-white px-8 py-1 rounded-xl mt-5 lg:mt-0"

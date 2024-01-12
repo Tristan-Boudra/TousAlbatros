@@ -28,6 +28,7 @@ const About = () => {
       distance: "500px",
       scale: 1,
       easing: "ease",
+      reset: true,
     };
 
     ScrollReveal().reveal(box1Ref.current, config);
@@ -54,7 +55,7 @@ const About = () => {
         </div>
         <img
           src={require("../assets/images/about/quote.png")}
-          className="w-96 h-64 top-0"
+          className="w-96 h-64 top-0 object-cover"
           alt="Background header"
         />
       </section>
@@ -83,11 +84,11 @@ const About = () => {
           </h1>
           <div className="flex flex-col gap-10 mt-10 items-center">
             <Values data={valuesTop} />
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col lg:flex-row items-center">
               <ValuesWithImage data={valuesMiddle[0]} />
               <img
                 src={require("../assets/images/about/value.png")}
-                className="w-64 h-42 mx-auto md:mx-0 py-10 md:py-0 md:w-96 md:h-64 top-0"
+                className="w-64 h-42 mx-auto md:mx-0 py-10 md:py-0 md:w-80 md:h-56 lg:w-96 lg:h-64 top-0"
                 alt="Background header"
               />
               <ValuesWithImage data={valuesMiddle[1]} />

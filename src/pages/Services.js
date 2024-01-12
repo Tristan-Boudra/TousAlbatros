@@ -25,6 +25,7 @@ const Services = () => {
       distance: "300px",
       scale: 1,
       easing: "ease",
+      reset: true,
     };
 
     ScrollReveal().reveal(box1Ref.current, config);

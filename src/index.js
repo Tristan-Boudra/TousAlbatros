@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Navbar from "./components/navbar";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
+import LegalNotice from "./pages/LegalNotice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,6 +23,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions-legales" element={<LegalNotice />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
