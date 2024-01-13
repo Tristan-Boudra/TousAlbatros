@@ -251,23 +251,23 @@ const valuesTop = [
   {
     id: 0,
     icon: UserCogIcon,
-    title: "Imperfection",
+    title: "Principe d'inperfection",
     subtitle:
-      "S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
+      "J’ai le droit de ne pas savoir, de ne pas comprendre, de questionner, de demander conseils, de me tromper, d’être maladroit·e et d’être excusé·e.",
   },
   {
     id: 1,
     icon: HeartHandIcon,
-    title: "Confiance",
+    title: "Principe de confiance",
     subtitle:
-      "Accorder sa confiance à priori en tentant de dépasser ses propres préjugés. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
+      "J’accueille la différence et l’histoire de chacun, j’accorde une confiance a priori en dépassant mes propres préjugés.",
   },
   {
     id: 2,
     icon: UserCheckIcon,
-    title: "Disponibilité",
+    title: "Principe de disponibilité",
     subtitle:
-      "Adopter une posture d’écoute et accorder du temps à l’autre. S’autoriser l’erreur, avoir le droit de se tromper et de poser des questions",
+      "Je me rends disponible et ouvert·e à l’échange, j’adopte une posture d’écoute et j’accorde du temps à l’autre pour répondre à ses interrogations et incompréhensions.",
   },
 ];
 
@@ -275,15 +275,16 @@ const valuesMiddle = [
   {
     id: 0,
     icon: BirdIcon,
-    title: "Douceur",
-    subtitle: "Regarder avec tendresse et accorder du temps à l’autre",
+    title: "Principe de douceur",
+    subtitle:
+      "J’essaie de ne pas crier et de garder mon calme, je fais preuve de lenteur, je regarde avec tendresse, je réponds aux demandes d’aide et je cherche la réconciliation.",
   },
   {
     id: 1,
     icon: SliderHorizontalIcon,
-    title: "Adaptabilité",
+    title: "Principe d'adaptabilité",
     subtitle:
-      "Accueillir et rendre accessible les services de l’association à tous",
+      "D’une part j’adapte mon discours, ma posture et mes contenus pour que l’autre m’accueille et me comprenne, d’autre part je rends accessibles les services de l’association sans discrimination.",
   },
 ];
 
@@ -291,85 +292,88 @@ const valuesBottom = [
   {
     id: 0,
     icon: PuzzlePieceIcon,
-    title: "Complémentarité",
-    subtitle: "Admettre la compétence d’autrui et orienter",
+    title: "Principe d'auto-réalisation",
+    subtitle:
+      "Je n’assiste pas mais j’accompagne l’autre vers sa propre réalisation, en valorisant le positif et en transmettant des clefs, et je ne me rends pas indispensable.",
   },
   {
     id: 1,
     icon: SmileIcon,
-    title: "Auto-réalisation",
-    subtitle: "Accompagner l’autre vers sa propre réalisation",
+    title: "Principe de complémentarité",
+    subtitle:
+      "J’admets la compétence d’autres personnes, intérieures ou extérieures à l’association, et je n’hésite pas à orienter.",
   },
 ];
 
 const reviews = [
   {
     id: 0,
-    name: "1",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Vous nous permettez de nous découvrir chaque jour et de découvrir des moyens d’agir autrement grâce aux idées des autres. »",
   },
   {
     id: 1,
-    name: "2",
+    name: "Adulte présent·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Très bien mené, dynamique positive et constructive. Intervention rythmée, contenu pertinent, activités variées. La progression de la séance est bien pensée et bien orchestrée. La gestion du groupe est maîtrisée et adaptée selon les classes. Intervention de qualité. »",
   },
   {
     id: 2,
-    name: "3",
+    name: "Stagiaire de troisième",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Tous Albatros est une association qui aide les jeunes à avoir confiance en soi, à réaliser que rien n’est impossible. On peut parler sans se faire juger. »",
   },
   {
     id: 3,
-    name: "4",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« J’ai aimé qu’on puisse se tutoyer tout de suite. Votre façon de nous parler est respectueuse, vous nous traitez d’égal à égal »",
   },
   {
     id: 4,
-    name: "5",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Une séance de bien-être avec des personnes qui ne sont pas dans le jugement mais dans l’écoute »",
   },
   {
     id: 5,
-    name: "6",
+    name: "Adulte présent·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Très bien mené. Les élèves sont acteurs de leur apprentissage et réalisent au fur et à mesure l’impact de leurs diverses actions »",
   },
   {
     id: 6,
-    name: "7",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Cet atelier a répondu à certaines questions que je pense me poser. Les intervenantes étaient très bienveillantes et dynamiques. »",
   },
   {
     id: 7,
-    name: "8",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« Ça m’a fait du bien de parler car j’ai tendance à être très silencieuse et ne pas exprimer ce que je ressens par peur du jugement. Merci beaucoup <3 »",
   },
   {
     id: 8,
-    name: "9",
+    name: "Adulte présent",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« C’était vraiment bien, interactif et ludique tout en abordant des sujets complexes et profonds »",
   },
   {
     id: 10,
-    name: "10",
+    name: "Jeune participant·e",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "« On ne s’est pas ennuyés, c’est bien structuré. Il y a tout : on joue, on parle. »",
   },
 ];
 
 const Project = [
   {
     id: 0,
-    name: "Tous Albatros T",
-    description: "Tous Albatros",
+    name: "Le Stage d’Envol : à la Découverte de Soi – pour l’insertion des jeunes",
+    description:
+      "Programme de 5 à 10 ateliers pour découvrir son potentiel et gagner confiance en soi, pour identifier ses intelligences et retrouver l’envie d’apprendre, pour rêver et se projeter dans l’avenir, pour découvrir sa citoyenneté et se saisir de sa liberté.",
     image: [
       {
         id: 0,
@@ -387,8 +391,9 @@ const Project = [
   },
   {
     id: 1,
-    name: "Tous Albatros 2 T",
-    description: "Tous Albatros 2",
+    name: "Les Sentinelles – pour prévenir la dépression et le suicide des jeunes",
+    description:
+      "Programme de 4 ateliers pour devenir gardien·ne de sa santé mentale et de celle des autres : prendre conscience de soi et de ses ressources intérieures, libérer sa parole et pratiquer l’écoute, apprendre à faire confiance et à demander de l’aide.",
     image: [
       {
         id: 0,
@@ -402,8 +407,9 @@ const Project = [
   },
   {
     id: 2,
-    name: "Tous Albatros T",
-    description: "Tous Albatros",
+    name: "De soi dans chaque média – pour éduquer à l'image et aux médias",
+    description:
+      "Programme de 3 ateliers pour comprendre l'origine de l'information, mesurer le poids de la subjectivité, stimuler l’esprit critique et le repérage des fake news, prévenir les rumeurs et le cyberharcèlement ainsi que développer sa créativité citoyenne.",
     image: [
       {
         id: 0,

@@ -63,10 +63,10 @@ const Services = () => {
       </section>
       <section className="py-32 px-10 flex flex-col relative max-w-screen-xl mx-auto">
         <div className="bg-primary/20 w-max rounded-full">
-          <p className="text-primary px-3 py-2 w-auto text-xs">Projets</p>
+          <p className="text-primary px-3 py-2 w-auto text-xs">Ateliers</p>
         </div>
         <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-4">
-          Nos projets phares
+          Nos programmes d’ateliers les plus demandés
         </h1>
         <div className="flex flex-col gap-10 mt-10">
           {allprojects.map((project, index) => {

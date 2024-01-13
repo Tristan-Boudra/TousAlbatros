@@ -12,10 +12,10 @@ const TextDescriptionPrestation = (props) => {
   return (
     <div>
       <div className="bg-primary/20 w-max rounded-full">
-        <p className="text-primary px-3 py-2 w-auto text-xs">Prestation</p>
+        <p className="text-primary px-3 py-2 w-auto text-xs">Actions</p>
       </div>
       <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-4">
-        Nos Prestations
+        Nos Actions
       </h1>
       <div className="flex flex-col gap-10 mt-10">{listIcon}</div>
     </div>

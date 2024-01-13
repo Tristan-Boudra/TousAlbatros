@@ -59,7 +59,7 @@ const Navbar = () => {
                   isActive ? "text-primary" : "text-tertiary"
                 }
               >
-                Prestations
+                Actions
               </NavLink>
             </li>
           </ul>
