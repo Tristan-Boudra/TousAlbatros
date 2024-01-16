@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import ScrollReveal from "scrollreveal";
 
 const LegalNotice = () => {
@@ -34,6 +35,13 @@ const LegalNotice = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Mentions Légales - Tous Albatros</title>
+        <meta
+          name="description"
+          content="Consultez les mentions légales de Tous Albatros, y compris des informations sur l'éditeur du site, la conception et le développement, l'hébergement, la possession du nom de domaine, l'utilisation des cookies, l'utilisation des données personnelles, la responsabilité de l'association Tous Albatros, et le droit applicable."
+        />
+      </Helmet>
       <section
         className="pt-20 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box1Ref}

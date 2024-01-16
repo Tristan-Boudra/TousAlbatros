@@ -9,6 +9,7 @@ import {
   Project,
 } from "../data";
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const box1Ref = useRef();
@@ -43,6 +44,13 @@ const Services = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Nos Services - Tous Albatros</title>
+        <meta
+          name="description"
+          content="Explorez les services proposés par Tous Albatros, y compris nos programmes d'ateliers les plus demandés. Consultez notre brochure pour visualiser notre offre d'ateliers d'Envol."
+        />
+      </Helmet>
       <section
         className="pt-16 md:pt-32 px-10 flex flex-col relative max-w-screen-xl mx-auto"
         ref={box1Ref}

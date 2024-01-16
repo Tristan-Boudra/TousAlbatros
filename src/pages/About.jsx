@@ -11,6 +11,7 @@ import {
   valuesTop,
 } from "../data/index";
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const box1Ref = useRef();
@@ -38,8 +39,17 @@ const About = () => {
     ScrollReveal().reveal(box5Ref.current, config);
     ScrollReveal().reveal(box6Ref.current, config);
   }, []);
+
   return (
     <div>
+      <Helmet>
+        <title>Tous Albatros - Découvrez notre association</title>
+        <meta
+          name="description"
+          content="Tous Albatros est une association de volontaires passionnés œuvrant pour le bien commun. Découvrez nos valeurs, notre équipe dévouée, et l'inspiration qui guide nos actions."
+        />
+      </Helmet>
+
       <section
         className="pt-16 md:pt-32 px-10 flex flex-col md:flex-row items-center relative max-w-screen-xl mx-auto"
         ref={box1Ref}

@@ -3,6 +3,7 @@ import illustration from "../assets/images/contact/illustration.png";
 import ScrollReveal from "scrollreveal";
 import { useEffect, useRef, useState } from "react";
 import Captcha from "../components/captcha";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
@@ -15,30 +16,48 @@ const Contact = () => {
 
     const form = document.getElementById("emailForm");
 
-    if (isCaptchaSolved) {
-      emailjs
-        .sendForm(
-          "service_fhd2nly",
-          "template_k0r3vit",
-          "#emailForm",
-          "7FUVxDYGr3haA5Uw2"
-        )
-        .then(
-          (result) => {
-            setErrorCaptcha(false);
-            setIsCaptchaSolved(true);
-            setTimeout(() => {
-              setSuccessSend(false);
-            }, 5000);
-            form.reset();
-          }
-          // (error) => {
-          //   console.log(error.text);
-          // }
-        );
-    } else {
+    // Vérifier tous les champs obligatoires
+    const requiredFields = ["name", "email", "surname", "subject", "message"];
+    let hasEmptyField = false;
+
+    requiredFields.forEach((fieldName) => {
+      const field = form.elements[fieldName];
+      if (!field.value.trim()) {
+        hasEmptyField = true;
+      }
+    });
+
+    if (hasEmptyField) {
+      // Afficher un message d'erreur concernant les champs vides
       setErrorCaptcha(true);
+      return;
     }
+
+    // Vérifier si le captcha est résolu
+    if (!isCaptchaSolved) {
+      setErrorCaptcha(true);
+      return;
+    }
+
+    // Envoyer le formulaire
+    emailjs
+      .sendForm(
+        "service_fhd2nly",
+        "template_k0r3vit",
+        "#emailForm",
+        "7FUVxDYGr3haA5Uw2"
+      )
+      .then(
+        (result) => {
+          setErrorCaptcha(false);
+          setIsCaptchaSolved(true);
+          setSuccessSend(true);
+          form.reset();
+        }
+        // (error) => {
+        //   console.log(error.text);
+        // }
+      );
   };
 
   useEffect(() => {
@@ -56,6 +75,13 @@ const Contact = () => {
 
   return (
     <div className="pb-10">
+      <Helmet>
+        <title>Nous Contacter - Tous Albatros</title>
+        <meta
+          name="description"
+          content="Contactez l'équipe de Tous Albatros. Nous sommes à votre disposition pour discuter et répondre à toutes vos questions. Remplissez le formulaire et envoyez-nous un message !"
+        />
+      </Helmet>
       <div
         className="flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto mt-32 md:px-10 md:gap-10"
         ref={box1Ref}

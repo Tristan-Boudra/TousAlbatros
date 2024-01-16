@@ -7,6 +7,7 @@ import { contentIcon, contentDescription, reviews } from "../data/index";
 import { useEffect, useRef, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import chevronUp from "../assets/images/icon/chevronUp.png";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const box1Ref = useRef();
@@ -90,6 +91,13 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Tous Albatros - Pour l'envol de la jeunesse</title>
+        <meta
+          name="description"
+          content="Découvrez Tous Albatros, une association dédiée à l'envol de la jeunesse. Explorez nos projets, nos valeurs et contactez-nous pour en savoir plus."
+        />
+      </Helmet>
       <section className="relative pt-52 md:pt-0 px-10 md:px-0 flex flex-col max-w-screen-xl md:max-w-full mx-auto">
         <div className="hidden md:block">
           <img
@@ -154,7 +162,7 @@ const Home = () => {
         </h1>
         <ul className="flex flex-col flex-wrap md:flex-row gap-20 md:gap-4 mx-auto sm:w-full justify-center mt-24">
           {displayedImages.map((review, index) => (
-            <li>
+            <li key={index}>
               <img
                 alt="chevronPrevImage"
                 src={chevronUp}

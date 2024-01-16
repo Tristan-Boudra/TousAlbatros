@@ -1,7 +1,7 @@
 const Icon = (props) => {
   const contentIcon = props.data;
   const listIcon = contentIcon.map((item) => (
-    <div className="flex items-center gap-5 md:gap-0">
+    <div className="flex items-center gap-5 md:gap-0" key={item.id}>
       {item.icon}
       <div className="flex flex-col md:ml-3 items-start mt-2 md:mt-0">
         <p className="text-xl md:text-2xl font-medium text-secondary">

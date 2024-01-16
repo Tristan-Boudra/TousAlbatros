@@ -1,38 +1,48 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 import { WidgetInstance } from "friendly-challenge";
 
 const Captcha = ({ onCaptchaSuccess }) => {
+  const [hasEmptyField, setHasEmptyField] = useState(false);
   const container = useRef();
   const widget = useRef();
 
-  const doneCallback = (solution) => {
-    // console.log("Captcha was solved. The form can be submitted.");
-    // console.log(solution);
+  const doneCallback = useCallback(
+    (solution) => {
+      if (!hasEmptyField) {
+        onCaptchaSuccess(true);
+      } else {
+        onCaptchaSuccess(false);
+      }
+    },
+    [onCaptchaSuccess, hasEmptyField]
+  );
 
-    onCaptchaSuccess(true);
-  };
-
-  const errorCallback = (err) => {
-    // console.log("There was an error when trying to solve the Captcha.");
-    // console.log(err);
-
-    onCaptchaSuccess(false);
-  };
+  const errorCallback = useCallback(
+    (err) => {
+      onCaptchaSuccess(false);
+    },
+    [onCaptchaSuccess]
+  );
 
   useEffect(() => {
-    if (!widget.current && container.current) {
-      widget.current = new WidgetInstance(container.current, {
-        startMode: "none",
-        doneCallback: doneCallback,
-        errorCallback: errorCallback,
-        language: "fr",
-      });
-    }
+    const initializeWidget = () => {
+      if (!widget.current && container.current) {
+        widget.current = new WidgetInstance(container.current, {
+          startMode: "none",
+          doneCallback: doneCallback,
+          errorCallback: errorCallback,
+          language: "fr",
+        });
+      }
+    };
+
+    initializeWidget();
 
     return () => {
       if (widget.current !== undefined) widget.current.reset();
+      setHasEmptyField(false); // Réinitialiser l'état des champs vides
     };
-  }, [container]);
+  }, [container, doneCallback, errorCallback]);
 
   return (
     <div
