@@ -126,7 +126,7 @@ const Home = () => {
             </button>
             <button className="bg-transparent md:bg-white rounded-full px-3 md:px-6 md:py-2 w-32 md:w-auto h-8 md:h-auto border border-primary md:border-none">
               <Link
-                to="/services"
+                to="/actions"
                 className="flex text-xs md:text-sm text-secondary font-medium justify-center items-center"
               >
                 Prestations

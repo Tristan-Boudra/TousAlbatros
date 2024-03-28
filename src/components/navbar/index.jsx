@@ -54,7 +54,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/services"
+                to="/actions"
                 className={({ isActive }) =>
                   isActive ? "text-primary" : "text-tertiary"
                 }
@@ -72,7 +72,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-10 bg-black bg-opacity-50 flex">
           <div className="bg-white p-4 w-full h-screen">
@@ -100,7 +99,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/actions"
                   className="hover:text-tertiary"
                   onClick={closeModal}
                 >

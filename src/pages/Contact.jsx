@@ -1,14 +1,15 @@
 import emailjs from "@emailjs/browser";
 import illustration from "../assets/images/contact/illustration.png";
 import ScrollReveal from "scrollreveal";
-import { useEffect, useRef, useState } from "react";
-import Captcha from "../components/captcha";
+import { useEffect, useRef } from "react";
+// import Captcha from "../components/captcha";
 import { Helmet } from "react-helmet";
+import { toast } from "sonner";
 
 const Contact = () => {
-  const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
-  const [errorCaptcha, setErrorCaptcha] = useState(false);
-  const [successSend, setSuccessSend] = useState(false);
+  // const [isCaptchaSolved, setIsCaptchaSolved] = useState(false);
+  // const [errorCaptcha, setErrorCaptcha] = useState(false);
+  // const [successSend, setSuccessSend] = useState(false);
   const box1Ref = useRef();
 
   const handleFormSubmit = (e) => {
@@ -17,27 +18,27 @@ const Contact = () => {
     const form = document.getElementById("emailForm");
 
     // Vérifier tous les champs obligatoires
-    const requiredFields = ["name", "email", "surname", "subject", "message"];
-    let hasEmptyField = false;
+    // const requiredFields = ["name", "email", "surname", "subject", "message"];
+    // let hasEmptyField = false;
 
-    requiredFields.forEach((fieldName) => {
-      const field = form.elements[fieldName];
-      if (!field.value.trim()) {
-        hasEmptyField = true;
-      }
-    });
+    // requiredFields.forEach((fieldName) => {
+    //   const field = form.elements[fieldName];
+    //   if (!field.value.trim()) {
+    //     hasEmptyField = true;
+    //   }
+    // });
 
-    if (hasEmptyField) {
-      // Afficher un message d'erreur concernant les champs vides
-      setErrorCaptcha(true);
-      return;
-    }
+    // if (hasEmptyField) {
+    //   // Afficher un message d'erreur concernant les champs vides
+    //   setErrorCaptcha(true);
+    //   return;
+    // }
 
     // Vérifier si le captcha est résolu
-    if (!isCaptchaSolved) {
-      setErrorCaptcha(true);
-      return;
-    }
+    // if (!isCaptchaSolved) {
+    //   setErrorCaptcha(true);
+    //   return;
+    // }
 
     // Envoyer le formulaire
     emailjs
@@ -49,10 +50,18 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setErrorCaptcha(false);
-          setIsCaptchaSolved(true);
-          setSuccessSend(true);
+          // setErrorCaptcha(false);
+          // setIsCaptchaSolved(true);
+          // setSuccessSend(true);
+          alert("Votre message a bien été envoyé !");
           form.reset();
+          // toast("Event has been created", {
+          //   description: "Sunday, December 03, 2023 at 9:00 AM",
+          //   action: {
+          //     label: "Undo",
+          //     onClick: () => console.log("Undo"),
+          //   },
+          // });
         }
         // (error) => {
         //   console.log(error.text);
@@ -178,19 +187,14 @@ const Contact = () => {
               id="message"
             />
           </div>
-          <Captcha
+          {/* <Captcha
             onCaptchaSuccess={(success) => setIsCaptchaSolved(success)}
           />
           {errorCaptcha && (
             <p className="text-red-500 text-sm mt-5">
               Veuillez résoudre le Captcha
             </p>
-          )}
-          {successSend && (
-            <p className="text-green text-sm mt-5">
-              Votre email a été envoyer avec succès !
-            </p>
-          )}
+          )} */}
           <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
             <p className="text-xs">
               <span className="text-red-500">*</span> Tous les champs sont
@@ -199,6 +203,15 @@ const Contact = () => {
             <button
               type="submit"
               className="bg-primary text-white px-8 py-1 rounded-xl mt-5 lg:mt-0"
+              onClick={() =>
+                toast("Event has been created", {
+                  description: "Sunday, December 03, 2023 at 9:00 AM",
+                  action: {
+                    label: "Undo",
+                    onClick: () => console.log("Undo"),
+                  },
+                })
+              }
             >
               Envoyer
             </button>
